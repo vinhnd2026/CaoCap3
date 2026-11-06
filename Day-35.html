@@ -190,6 +190,15 @@ img, svg { max-width: 100%; }
 .sentence-sub.cover.covered::after { content: "👁 Bấm để xem pinyin + dịch nghĩa"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #6b7280; font-size: 13px; font-weight: 600; }
 /* --- Nghĩa tiếng Việt của từ mới (ngay dưới tiêu đề thẻ từ) --- */
 .word-meaning { font-size: 15px; color: #1e293b; margin: 2px 0 10px; }
+
+.dlg-line{padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:8px;background:#fff}
+.dlg-sp{display:inline-block;padding:2px 9px;border-radius:12px;color:#fff;font-weight:700;font-size:13px;margin-right:8px;vertical-align:middle}
+.dlg-zh{font-size:17px;line-height:1.9}
+.dlg-zh ruby rt{font-size:.52em;color:#2563eb}
+.dlg-zh.hide-ruby rt{display:none}
+.dlg-vi{color:#64748b;font-size:14px;margin:2px 0 0 30px}
+.dlg-voice-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0}
+.dlg-voice-row select{max-width:100%;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
 </style>
 </head>
 <body>
@@ -197,7 +206,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 28</b>
+    <b id="prog-text">0 / 32</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -747,6 +756,77 @@ img, svg { max-width: 100%; }
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
 <div class="card">
+<h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu Cao cấp 3</span></h2>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小红 định mua điện thoại ở cửa hàng liên kết, hỏi 小明 về các thương hiệu.</div>
+<div class="reading-box">
+<div class="reading-Controls">
+<button class="tts-btn" onclick="playDlgAll()">▶️ Nghe cả đoạn hội thoại</button>
+<button class="tts-btn" id="dlg-pause-btn" onclick="toggleDlgPause()">⏸️ Tạm dừng</button>
+<button class="tts-btn" onclick="stopDlg()">⏹️ Dừng</button>
+<button class="btn-sm" id="dlg-toggle" onclick="toggleDlgScript()">👁️ Hiện lời thoại</button>
+<button class="btn-sm" onclick="toggleDlgRuby()">🔤 Ẩn/Hiện Pinyin</button>
+</div>
+<div style="margin-top:8px;"><span class="hint">Tốc độ:</span>
+<input type="range" id="dlg-speed-range" min="0.5" max="1.5" step="0.01" value="0.88" oninput="setDlgRateNum(this.value)" style="vertical-align:middle;width:160px">
+<input type="number" id="dlg-speed-num" min="0.5" max="1.5" step="0.05" value="0.88" onchange="setDlgRateNum(this.value)" style="width:70px;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px"> ×
+</div>
+<div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
+<div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
+<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button></div>
+<div class="dlg-script" id="dlg-script" style="display:none">
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>？</span><div class="dlg-vi">Tiểu Hồng, hôm nay bạn đi đâu mua điện thoại?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>连<rt>lián</rt></ruby><ruby>锁<rt>suǒ</rt></ruby><ruby>商<rt>shāng</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Tôi đến cửa hàng liên kết mua điện thoại.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>连<rt>Lián</rt></ruby><ruby>锁<rt>suǒ</rt></ruby><ruby>商<rt>shāng</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Thương hiệu điện thoại ở cửa hàng liên kết có tốt không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>连<rt>Lián</rt></ruby><ruby>锁<rt>suǒ</rt></ruby><ruby>商<rt>shāng</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby>？</span><div class="dlg-vi">Thương hiệu điện thoại ở cửa hàng liên kết rất tốt. Bạn thích thương hiệu nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>耐<rt>nài</rt></ruby><ruby>久<rt>jiǔ</rt></ruby><ruby>度<rt>dù</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Tôi thích thương hiệu này. Độ bền của điện thoại thương hiệu này rất tốt.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>列<rt>liè</rt></ruby><ruby>举<rt>jǔ</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bạn có thể kể ra vài thương hiệu điện thoại không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>列<rt>liè</rt></ruby><ruby>举<rt>jǔ</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby>，<ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby>，<ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby>。</span><div class="dlg-vi">Tôi có thể kể ra vài thương hiệu điện thoại, thương hiệu này, thương hiệu kia.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>媲<rt>pì</rt></ruby><ruby>美<rt>měi</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Thương hiệu này có thể sánh với thương hiệu kia không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>可<rt>Kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby>！<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>媲<rt>pì</rt></ruby><ruby>美<rt>měi</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>用<rt>yòng</rt></ruby>。</span><div class="dlg-vi">Được! Thương hiệu này có thể sánh với thương hiệu kia, rất dễ dùng.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>贵<rt>guì</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Điện thoại thương hiệu này có đắt không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>贵<rt>guì</rt></ruby>，<ruby>价<rt>jià</rt></ruby><ruby>廉<rt>lián</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>美<rt>měi</rt></ruby>。</span><div class="dlg-vi">Điện thoại thương hiệu này không đắt, vừa rẻ vừa tốt.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>连<rt>lián</rt></ruby><ruby>锁<rt>suǒ</rt></ruby><ruby>商<rt>shāng</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>吧<rt>ba</rt></ruby>。</span><div class="dlg-vi">Được! Chúng ta cùng nhau đến cửa hàng liên kết mua điện thoại nhé.</div></div>
+</div>
+<div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
+</div>
+<div class="q-item" id="dlg-1">
+<div><b>Câu 1.</b> 小红去哪儿买手机？ <span class="hint">(Tiểu Hồng đi đâu mua điện thoại?)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：我去连锁商店买手机。')">A. 连锁商店</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我去连锁商店买手机。')">B. 饭店</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我去连锁商店买手机。')">C. 公司</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我去连锁商店买手机。')">D. 学校</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="dlg-2">
+<div><b>Câu 2.</b> 这个品牌可以媲美那个品牌，这是什么意思？ <span class="hint">(Thương hiệu này sánh được với thương hiệu kia, điều đó có nghĩa là gì?)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小明：可以！这个品牌可以媲美那个品牌，很好用。')">A. 这个品牌很好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：可以！这个品牌可以媲美那个品牌，很好用。')">B. 这个品牌不好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：可以！这个品牌可以媲美那个品牌，很好用。')">C. 这个品牌很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：可以！这个品牌可以媲美那个品牌，很好用。')">D. 这个品牌不贵</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="dlg-3">
+<div><b>Câu 3.</b> 小明列举几个手机品牌，他怎么样？ <span class="hint">(Tiểu Minh kể ra vài thương hiệu điện thoại, anh ấy thế nào?)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小明：我可以列举几个手机品牌，这个品牌，那个品牌。')">A. 他知道几个手机品牌</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我可以列举几个手机品牌，这个品牌，那个品牌。')">B. 他不知道手机品牌</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我可以列举几个手机品牌，这个品牌，那个品牌。')">C. 他不喜欢手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我可以列举几个手机品牌，这个品牌，那个品牌。')">D. 他没有钱</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="dlg-4">
+<div><b>Câu 4.</b> 小明为什么喜欢这个品牌？ <span class="hint">(Vì sao Tiểu Minh thích thương hiệu này?)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：我喜欢这个品牌。这个品牌的手机耐久度很好。')">A. 因为这个品牌的手机耐久度很好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我喜欢这个品牌。这个品牌的手机耐久度很好。')">B. 因为这个品牌很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我喜欢这个品牌。这个品牌的手机耐久度很好。')">C. 因为他不喜欢手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我喜欢这个品牌。这个品牌的手机耐久度很好。')">D. 因为他很忙</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
 <h2>🔤 Bài phụ: Chọn pinyin đúng <span class="badge">Chữ dễ nhầm âm</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào đáp án đúng — không cần gõ dấu thanh đâu anh.</div>
 <div class="q-item" id="py-1">
@@ -768,7 +848,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 28</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -790,6 +870,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 5 (Đoạn văn):</b> 连锁商店 → 列举 → 耐久度 → 媲美 → 品牌</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 这家连锁商店的东西很好，一些人都喜欢。<br>2. 这个东西的耐久度很高，可以用一些年。<br>3. 老师列举了一些地方，我们都明白了。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. D — 大受欢迎 &nbsp;|&nbsp; 2. C — 扩大了 &nbsp;|&nbsp; 3. A — 几个品牌</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 连锁商店 &nbsp; 2. A — 这个品牌很好 &nbsp; 3. A — 他知道几个手机品牌 &nbsp; 4. A — 因为这个品牌的手机耐久度很好</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -798,7 +879,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap3-Day-35';
-var TOTAL_TASKS = 28;
+var TOTAL_TASKS = 32;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (关税)",
@@ -903,6 +984,22 @@ var ITEM_INFO = {
   "read-3": [
     "Đọc hiểu câu 3",
     "A — 几个品牌"
+  ],
+  "dlg-1": [
+    "Nghe hội thoại 1 (小红去哪儿买手机？)",
+    "连锁商店"
+  ],
+  "dlg-2": [
+    "Nghe hội thoại 2 (这个品牌可以媲美那个品牌，这是什么意思？)",
+    "这个品牌很好"
+  ],
+  "dlg-3": [
+    "Nghe hội thoại 3 (小明列举几个手机品牌，他怎么样？)",
+    "他知道几个手机品牌"
+  ],
+  "dlg-4": [
+    "Nghe hội thoại 4 (小明为什么喜欢这个品牌？)",
+    "因为这个品牌的手机耐久度很好"
   ],
   "py-1": [
     "Pinyin: 连锁商店",
@@ -4045,5 +4142,181 @@ function flashReshuffle() { flashShuffleDeck(); flashRender(); }
 
 flashShuffleDeck(); flashRender();
 </script>
+<script>
+// ====== Bài 8: Nghe hội thoại ======
+var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，你今天去哪儿买手机？"}, {"sp": "hong", "zh": "我去连锁商店买手机。"}, {"sp": "ming", "zh": "连锁商店的手机品牌好吗？"}, {"sp": "hong", "zh": "连锁商店的手机品牌很好。你喜欢什么品牌？"}, {"sp": "ming", "zh": "我喜欢这个品牌。这个品牌的手机耐久度很好。"}, {"sp": "hong", "zh": "你可以列举几个手机品牌吗？"}, {"sp": "ming", "zh": "我可以列举几个手机品牌，这个品牌，那个品牌。"}, {"sp": "hong", "zh": "这个品牌可以媲美那个品牌吗？"}, {"sp": "ming", "zh": "可以！这个品牌可以媲美那个品牌，很好用。"}, {"sp": "hong", "zh": "这个品牌的手机贵吗？"}, {"sp": "ming", "zh": "这个品牌的手机不贵，价廉物美。"}, {"sp": "hong", "zh": "好！我们一起去连锁商店买手机吧。"}];
+var dlgPlaying = false;
+var dlgPaused = false;
+var dlgRate = 0.88;
+var DLG_VOICE_LS = 'dialogue-voices';
+var DLG_ZH_VOICES = [];
+function dlgVoiceKey(v) { return v.voiceURI || v.name; }
+function dlgSavedVoices() {
+  try { return JSON.parse(localStorage.getItem(DLG_VOICE_LS) || '{}'); } catch (e) { return {}; }
+}
+function dlgSaveVoice(spId, key) {
+  var m = dlgSavedVoices(); m[spId] = key;
+  try { localStorage.setItem(DLG_VOICE_LS, JSON.stringify(m)); } catch (e) {}
+}
+function dlgDefaultKey(spIdx) {
+  if (!DLG_ZH_VOICES.length) return null;
+  return dlgVoiceKey(DLG_ZH_VOICES[Math.min(spIdx, DLG_ZH_VOICES.length - 1)]);
+}
+function dlgVoiceFor(spId) {
+  var saved = dlgSavedVoices()[spId];
+  for (var i = 0; i < DLG_ZH_VOICES.length; i++)
+    if (dlgVoiceKey(DLG_ZH_VOICES[i]) === saved) return DLG_ZH_VOICES[i];
+  var idx = 0;
+  for (var k = 0; k < DLG_SPEAKERS.length; k++) if (DLG_SPEAKERS[k].id === spId) idx = k;
+  var dk = dlgDefaultKey(idx);
+  for (var j = 0; j < DLG_ZH_VOICES.length; j++)
+    if (dlgVoiceKey(DLG_ZH_VOICES[j]) === dk) return DLG_ZH_VOICES[j];
+  return null;
+}
+function dlgPitchFor(spIdx) {
+  var keys = DLG_SPEAKERS.map(function (s) {
+    var v = dlgVoiceFor(s.id); return v ? dlgVoiceKey(v) : null;
+  });
+  var distinct = keys.filter(function (x, i, a) { return a.indexOf(x) === i; }).length;
+  if (distinct > 1) return 1.0;
+  return [0.9, 1.25, 1.0][spIdx % 3];
+}
+function dlgTip(text) {
+  var tip = document.getElementById('dlg-tip');
+  if (tip) tip.textContent = text;
+}
+var DLG_TIP_DEFAULT = "💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.";
+function dlgVoiceNote() {
+  var note = document.getElementById('dlg-voice-note');
+  if (!note) return;
+  if (!DLG_ZH_VOICES.length) {
+    note.textContent = 'Thiết bị chưa tìm thấy giọng tiếng Trung — sẽ dùng giọng mặc định.';
+    return;
+  }
+  var txt = DLG_SPEAKERS.map(function (s) {
+    var v = dlgVoiceFor(s.id);
+    return s.name + ': ' + (v ? v.name : 'giọng mặc định');
+  }).join(' · ');
+  if (DLG_ZH_VOICES.length === 1) txt += '. Thiết bị chỉ có 1 giọng tiếng Trung nên các nhân vật dùng chung giọng, phân biệt bằng cao độ.';
+  note.textContent = txt;
+}
+function buildVoicePickers() {
+  var box = document.getElementById('dlg-voice-pickers');
+  if (!box) return;
+  box.innerHTML = '';
+  if (!('speechSynthesis' in window)) {
+    box.innerHTML = '<span class="hint">Trình duyệt này không hỗ trợ đọc giọng nói.</span>';
+    dlgTip('Trình duyệt này không hỗ trợ đọc giọng nói.');
+    return;
+  }
+  if (!DLG_ZH_VOICES.length) {
+    box.innerHTML = '<span class="hint">Thiết bị chưa tìm thấy giọng tiếng Trung — sẽ dùng giọng mặc định. (Trên điện thoại thường có sẵn giọng tiếng Trung.)</span>';
+    dlgTip('Trên thiết bị này không có giọng tiếng Trung nên chưa chọn được giọng — bài vẫn đọc bằng giọng mặc định.');
+    return;
+  }
+  dlgTip(DLG_TIP_DEFAULT);
+  DLG_SPEAKERS.forEach(function (s) {
+    var row = document.createElement('div');
+    row.className = 'dlg-voice-row';
+    var badge = document.createElement('span');
+    badge.className = 'dlg-sp'; badge.style.background = s.color; badge.textContent = s.name;
+    var lab = document.createElement('span');
+    lab.innerHTML = '<b>Giọng của ' + s.name + '</b> (' + s.vi + ' · ' + (s.gender === 'nam' ? 'Nam' : 'Nữ') + '):';
+    var sel = document.createElement('select');
+    sel.id = 'dlg-voice-' + s.id;
+    DLG_ZH_VOICES.forEach(function (v) {
+      var o = document.createElement('option');
+      o.value = dlgVoiceKey(v); o.textContent = v.name;
+      sel.appendChild(o);
+    });
+    var cur = dlgVoiceFor(s.id);
+    if (cur) sel.value = dlgVoiceKey(cur);
+    sel.onchange = function () { setDlgVoice(s.id, sel.value); };
+    var prev = document.createElement('button');
+    prev.className = 'tts-btn'; prev.textContent = '🔊 Nghe thử';
+    prev.onclick = function () { previewDlgVoice(s.id); };
+    row.appendChild(badge); row.appendChild(lab); row.appendChild(sel); row.appendChild(prev);
+    box.appendChild(row);
+  });
+}
+function setDlgVoice(spId, key) { dlgSaveVoice(spId, key); dlgVoiceNote(); }
+function pickDlgVoices() {
+  if (!('speechSynthesis' in window)) return;
+  DLG_ZH_VOICES = window.speechSynthesis.getVoices().filter(function (v) {
+    return (v.lang || '').toLowerCase().indexOf('zh') === 0;
+  });
+  buildVoicePickers();
+  dlgVoiceNote();
+}
+if ('speechSynthesis' in window) {
+  pickDlgVoices();
+  window.speechSynthesis.onvoiceschanged = pickDlgVoices;
+}
+function setDlgRateNum(v) {
+  v = parseFloat(v);
+  if (isNaN(v)) v = 0.88;
+  v = Math.min(1.5, Math.max(0.5, v));
+  dlgRate = v;
+  var r = document.getElementById('dlg-speed-range');
+  var n = document.getElementById('dlg-speed-num');
+  if (r) r.value = v;
+  if (n) n.value = v;
+}
+function dlgSpeak(i, onDone) {
+  if (!('speechSynthesis' in window)) { if (onDone) onDone(); return; }
+  var line = DLG_LINES[i];
+  var spIdx = 0;
+  for (var k = 0; k < DLG_SPEAKERS.length; k++) if (DLG_SPEAKERS[k].id === line.sp) spIdx = k;
+  var u = new SpeechSynthesisUtterance(line.zh);
+  u.lang = 'zh-CN'; u.rate = dlgRate;
+  var v = dlgVoiceFor(line.sp);
+  if (v) u.voice = v;
+  u.pitch = dlgPitchFor(spIdx);
+  u.onend = function () { if (onDone) onDone(); };
+  u.onerror = function () { if (onDone) onDone(); };
+  window.speechSynthesis.speak(u);
+}
+function playDlgAll() {
+  if (!('speechSynthesis' in window)) return;
+  stopDlg();
+  dlgPlaying = true;
+  var i = 0;
+  (function next() {
+    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPauseBtn(); return; }
+    dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
+  })();
+}
+function updateDlgPauseBtn() {
+  var b = document.getElementById('dlg-pause-btn');
+  if (b) b.textContent = dlgPaused ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+}
+function toggleDlgPause() {
+  if (!('speechSynthesis' in window)) return;
+  var ss = window.speechSynthesis;
+  if (ss.paused) { ss.resume(); dlgPaused = false; }
+  else if (ss.speaking) { ss.pause(); dlgPaused = true; }
+  else return;
+  updateDlgPauseBtn();
+}
+function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPauseBtn(); }
+function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
+function previewDlgVoice(spId) {
+  for (var i = 0; i < DLG_LINES.length; i++)
+    if (DLG_LINES[i].sp === spId) { playDlgLine(i); return; }
+}
+function toggleDlgScript() {
+  var el = document.getElementById('dlg-script');
+  var btn = document.getElementById('dlg-toggle');
+  var show = el.style.display === 'none';
+  el.style.display = show ? 'block' : 'none';
+  btn.textContent = show ? '🙈 Ẩn lời thoại' : '👁️ Hiện lời thoại';
+}
+function toggleDlgRuby() {
+  var els = document.querySelectorAll('.dlg-zh');
+  for (var k = 0; k < els.length; k++) els[k].classList.toggle('hide-ruby');
+}
+</script>
+
 </body>
 </html>
