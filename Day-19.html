@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -710,6 +710,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="非常|离|，|快|，|老师|地方|一个|学习|，|住|高兴|的|偏远|他的|，|商店|在|攀升|很|回|。|期盼|他|家|远|很|很|他"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="他绝对不会去偏远的地方工作，因为他很期盼和家人在一起。">
+<div><b>Câu 4:</b> Anh ấy tuyệt đối sẽ không đi làm việc ở nơi xa xôi, vì anh ấy rất mong được ở bên người nhà.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="他|偏远|去|和|绝对|不|在|他|很|。|工作|，|地方|的|家人|因为|期盼|会|一起"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 3</span></h2>
@@ -853,7 +859,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -884,7 +890,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap3-Day-19';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (兼职)",
@@ -977,6 +983,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "他的学习攀升很快，老师很高兴，他住在一个偏远的地方，离商店很远，他非常期盼回家。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "他绝对不会去偏远的地方工作，因为他很期盼和家人在一起。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
