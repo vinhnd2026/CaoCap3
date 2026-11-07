@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -686,6 +686,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="他|，|数据|东西|推高|来|觉得|，|很|不|，|好|了|他们|数据|，|好|觉得|东西|推高|把|看|了|。|从|他|很"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="从数据来看，这个地方很好，同乡们都想去那个圣地看看。">
+<div><b>Câu 4:</b> Nhìn từ dữ liệu thì nơi này rất tốt, những người đồng hương đều muốn đến thánh địa đó xem thử.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="想|们|从|地方|去|很|都|，|。|好|看|那个|，|看|数据|看|来|同乡|圣地|这个"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 3</span></h2>
@@ -829,7 +835,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -860,7 +866,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap3-Day-44';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (牵线搭桥)",
@@ -953,6 +959,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "他们把东西推高了，他推高了东西，觉得很不好，从数据来看，他觉得数据很好。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "从数据来看，这个地方很好，同乡们都想去那个圣地看看。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
