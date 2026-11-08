@@ -25,7 +25,7 @@ Bộ bài học Cao cấp 3: 71 ngày, mỗi ngày 5 từ mới, học từ Bài
 
 ## Bổ sung (học sau khi xong 71 ngày)
 
-- **📖 Ôn tập Ngữ pháp Cao cấp 3 (40 điểm + 33 bài tập + mục Động từ ly hợp):** [Bai-Hoc-On-Ngu-Phap-CaoCap3.html](https://vinhnd2026.github.io/CaoCap3/Bai-Hoc-On-Ngu-Phap-CaoCap3.html) — pinyin hiện sẵn trong mọi ví dụ.
+- **📖 Ôn tập Ngữ pháp Cao cấp 3 (40 điểm + 33 bài tập):** [Bai-Hoc-On-Ngu-Phap-CaoCap3.html](https://vinhnd2026.github.io/CaoCap3/Bai-Hoc-On-Ngu-Phap-CaoCap3.html) — pinyin hiện sẵn trong mọi ví dụ; kèm mục Động từ ly hợp （离合动词） với ví dụ dạng tách cho từng động từ.
 - **📚 Bài Tổng Kết Cao cấp 3:** [Bai-Hoc-Tong-Ket-CaoCap3.html](https://vinhnd2026.github.io/CaoCap3/Bai-Hoc-Tong-Ket-CaoCap3.html) — flashcard toàn bộ từ, bảng từ vựng 10 bài, 8 bài tập tổng kết (62 bài tập), truyện tổng kết dùng đủ toàn bộ từ vựng.
 
 Bấm vào từng ngày bên dưới để mở thẳng trang bài học của ngày đó.
@@ -76,7 +76,7 @@ Bấm vào từng ngày bên dưới để mở thẳng trang bài học của n
 | Day 41 | Bài 6 | 婚龄, 火花, 捐赠, 困惑, 利他主义 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-41.html) |
 | Day 42 | Bài 6 | 美誉, 门当户对, 碰撞, 评价, 祈祷 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-42.html) |
 | Day 43 | Bài 6 | 牵线搭桥, 悄然, 倾向, 情侣, 涉及 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-43.html) |
-| Day 44 | Bài 6 | 圣地, 数据, 坦荡, 同乡, 推高 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-44.html) |
+| Day 44 | Bài 6 | 圣地, 数据, 坦塌, 同乡, 推高 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-44.html) |
 | Day 45 | Bài 6 | 献血, 信仰, 要素, 依次, 异性 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-45.html) |
 | Day 46 | Bài 6–7 | 涌入, 增幅, 持续, 抽签, 锻炼 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-46.html) |
 | Day 47 | Bài 7 | 负担, 荒唐, 挥汗如雨, 肌肉, 焦虑 | [Mở bài học](https://vinhnd2026.github.io/CaoCap3/Day-47.html) |
