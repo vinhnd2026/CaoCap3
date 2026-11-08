@@ -277,7 +277,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
 <button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
 <span class="flash-count" id="flash-count"></span>
-</div></div>
+</div></div><style>#flash-wrap .flash-card{height:216px}#flash-wrap .flash-ex{margin-top:7px;font-size:1.02rem;line-height:2;color:#1e3a8a}#flash-wrap .flash-ex ruby rt{font-size:.52em;color:#2563eb}#flash-wrap .flash-ex-label{font-size:.8rem;font-weight:700;color:#64748b}#flash-wrap .flash-ex-vi{font-size:.86rem;color:#475569}</style>
 <div class="card">
 <h2>1. 献血 — xiànxiě · hiến huyết <span class="badge">Động từ</span></h2>
 <div class="word-meaning">Nghĩa: <b>hiến máu</b></div>
@@ -629,8 +629,8 @@ img, svg { max-width: 100%; }
 <div class="sub" style="margin-bottom:8px;">📖 Ôn lại ngữ pháp đã học ở Day 44.</div>
 <div class="gram-intro">
 <div><b>Công thức:</b> 从 + 角度/方面 + 来看，……</div>
-<div>Ôn: 从……来看 nghĩa là &#x27;xét từ… mà xem&#x27;: người nói đưa ra nhận xét hay đánh giá dựa trên một góc độ, một phương diện cụ thể, chứ không nói chung chung. Góc độ đó có thể là 数据 (số liệu), 时间 (thời gian), 平台 (nền tảng) hay 微信: 从 đặt đầu câu, sau đó là góc độ, rồi mới đến 来看, cuối cùng mới là nhận xét. 来看 là cụm cố định, không được bỏ 来, cũng không được tách 来 và 看 ra hay đổi chỗ. Khác với cách nói trực tiếp nêu nhận xét, thêm 从……来看 cho thấy nhận xét này có căn cứ, có góc nhìn rõ ràng. Anh nhớ: sau 来看 là một câu đầy đủ nêu nhận xét, không đứng một mình; góc độ càng cụ thể thì nhận xét càng có sức thuyết phục. Ví dụ: 从数据来看，他喜欢学习.</div>
-<div class="gram-mistake"><div><b>⚠️ Lỗi thường gặp:</b> <span style="color:#b91c1c">✗ 从数据看，今年比去年好。</span> → <span style="color:#15803d">✓ 从数据来看，今年比去年好。</span></div><div>“从……来看” là cụm cố định, không được bỏ “来”.</div></div>
+<div>Ôn: 从……来看 nghĩa là &#x27;xét từ… mà xem&#x27;: người nói đưa ra nhận xét hay đánh giá dựa trên một góc độ, một phương diện cụ thể, chứ không nói chung chung. Góc độ đó có thể là 数据 (số liệu), 时间 (thời gian), 平台 (nền tảng) hay 微信: 从 đặt đầu câu, sau đó là góc độ, rồi mới đến 来看, cuối cùng mới là nhận xét. 来看 đặt ngay sau góc độ; có góc độ rồi thì bỏ 来 thành 从……看 vẫn đúng, nhưng không tách 来 và 看 ra chen vào giữa câu. Khác với cách nói trực tiếp nêu nhận xét, thêm 从……来看 cho thấy nhận xét này có căn cứ, có góc nhìn rõ ràng. Anh nhớ: sau 来看 là một câu đầy đủ nêu nhận xét, không đứng một mình; góc độ càng cụ thể thì nhận xét càng có sức thuyết phục. Ví dụ: 从数据来看，他喜欢学习.</div>
+<div class="gram-mistake"><div><b>⚠️ Lỗi thường gặp:</b> <span style="color:#b91c1c">✗ 从来看，今年比去年好。</span> → <span style="color:#15803d">✓ 从数据来看，今年比去年好。</span></div><div>Khung “从……来看” phải có góc độ cụ thể ở giữa (数据、形势、趋势…); “从来看” thiếu góc độ nên sai. Có góc độ rồi thì viết gọn “从……看” cũng đúng.</div></div>
 </div>
 <div class="sub" style="margin-bottom:8px;">Nghe 5 ví dụ rồi làm 2 bài tập dưới đây:</div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('从数据来看，他去学校。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>从<rt>Cóng</rt></ruby><ruby>数<rt>shù</rt></ruby><ruby>据<rt>jù</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。</span> <span class="hint">(Xét theo số liệu thì anh ấy đi học.)</span></div>
@@ -657,7 +657,7 @@ img, svg { max-width: 100%; }
 <div class="q-item" id="gram-2">
 <div><b>2. 从……来看:</b></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: 来看 là cụm cố định, không tách ra.')">A. 从数据他来看去学校。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: 来看 phải đặt ngay sau góc độ, không tách ra chen vào giữa câu。')">A. 从数据他来看去学校。</button>
 <button class="mc-btn" onclick="checkMC(this, true, 'gram-2', '✓ Đúng! 来看 đặt sau góc độ.')">B. 从数据来看，他去学校。</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
@@ -706,10 +706,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>他<rt>Tā</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xuè</rt></ruby>，<ruby>觉<rt>jué</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>si</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby>，<ruby>觉<rt>jué</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>快<rt>kuài</rt></ruby><ruby>乐<rt>lè</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>重<rt>zhòng</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>素<rt>sù</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>依<rt>yī</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>走<rt>zǒu</rt></ruby>，<ruby>觉<rt>jué</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>si</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>认<rt>rèn</rt></ruby><ruby>识<rt>shi</rt></ruby><ruby>异<rt>yì</rt></ruby><ruby>性<rt>xìng</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>，<ruby>觉<rt>jué</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xīng</rt></ruby>。</p>
+<p class="read-para-text"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby>，<ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby>，<ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>了<rt>le</rt></ruby>。 <ruby>学<rt>Xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>依<rt>yī</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>间<rt>jiān</rt></ruby>，<ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>帮<rt>bāng</rt></ruby><ruby>人<rt>rén</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>说<rt>shuō</rt></ruby>，<ruby>帮<rt>bāng</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>后<rt>hòu</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>样<rt>yàng</rt></ruby><ruby>做<rt>zuò</rt></ruby>。 <ruby>医<rt>Yī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>休<rt>xiū</rt></ruby><ruby>息<rt>xi</rt></ruby>，<ruby>都<rt>dōu</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>重<rt>zhòng</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>素<rt>sù</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["他去献血，觉得很有意思。", "他有信仰，觉得很快乐。", "这是一个重要要素，老师觉得很好。", "他们依次走，觉得很有意思。", "他认识异性朋友，觉得很高兴。"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["今天，学校里有一个献血的活动，学生们都去了。", "学生们依次来到一个大房间，一个一个献血。", "他也去献血了，他很高兴可以帮人。", "他说，帮人是他的信仰，他以后还会这样做。", "医生告诉大家，好好吃饭和好好休息，都是健康的重要要素。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -718,40 +718,40 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Anh ấy đi hiến máu, thấy rất có ý nghĩa. Anh ấy có tín ngưỡng, thấy rất vui. Đây là một yếu tố quan trọng, thầy giáo thấy rất tốt. Họ lần lượt đi, thấy rất có ý nghĩa. Anh ấy quen bạn khác giới, thấy rất vui.</p></div>
+<div class="read-para-trans"><p>Hôm nay, trong trường có một hoạt động hiến máu, học sinh đều đến. Học sinh lần lượt đến một căn phòng lớn, từng người một hiến máu. Anh ấy cũng đi hiến máu, anh ấy rất vui vì có thể giúp người. Anh ấy nói, giúp người là tín ngưỡng của anh ấy, sau này anh ấy vẫn sẽ làm như vậy. Bác sĩ nói với mọi người, ăn uống tử tế và nghỉ ngơi tử tế đều là yếu tố quan trọng của sức khỏe.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
-<div class="read-q-head"><span class="read-q-num">1</span><span>他去做什么？</span></div>
+<div class="read-q-head"><span class="read-q-num">1</span><span>今天学校里有什么活动？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 他去献血，觉得很有意思。')">A. 买东西</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 他去献血，觉得很有意思。')">B. 学习</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 他去献血，觉得很有意思。')">C. 献血</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 他去献血，觉得很有意思。')">D. 工作</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天，学校里有一个献血的活动，学生们都去了。')">A. 一个考试</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天，学校里有一个献血的活动，学生们都去了。')">B. 一个电影</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 今天，学校里有一个献血的活动，学生们都去了。')">C. 献血的活动</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天，学校里有一个献血的活动，学生们都去了。')">D. 一个比赛</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-2">
-<div class="read-q-head"><span class="read-q-num">2</span><span>他有什么？</span></div>
+<div class="read-q-head"><span class="read-q-num">2</span><span>学生们怎么来到大房间？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 他有信仰，觉得很快乐。')">A. 时间</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 他有信仰，觉得很快乐。')">B. 钱</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 他有信仰，觉得很快乐。')">C. 信仰</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 他有信仰，觉得很快乐。')">D. 工作</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 学生们依次来到一个大房间，一个一个献血。')">A. 坐车来到</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 学生们依次来到一个大房间，一个一个献血。')">B. 一起来到</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 学生们依次来到一个大房间，一个一个献血。')">C. 依次来到</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 学生们依次来到一个大房间，一个一个献血。')">D. 慢慢走来</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>他们怎么样走？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>他说帮人是他的什么？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 他们依次走，觉得很有意思。')">A. 一起走</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 他们依次走，觉得很有意思。')">B. 不知道</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 他们依次走，觉得很有意思。')">C. 依次走</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 他们依次走，觉得很有意思。')">D. 很快走</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 他说，帮人是他的信仰，他以后还会这样做。')">A. 娱乐</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 他说，帮人是他的信仰，他以后还会这样做。')">B. 机遇</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 他说，帮人是他的信仰，他以后还会这样做。')">C. 信仰</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 他说，帮人是他的信仰，他以后还会这样做。')">D. 工作</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
 <div class="card">
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu Cao cấp 3</span></h2>
-<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小明 và 小红 ở trường nói về hiến máu.</div>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: Trường có hoạt động hiến máu; 小红 sợ đau, 小明 động viên: chỉ cần khỏe mạnh là hiến được, mọi người hiến lần lượt từng người một.</div>
 <div class="reading-box">
 <div class="reading-Controls dlg-controls-row">
 <span class="hint">Tốc độ:</span>
@@ -766,55 +766,55 @@ img, svg { max-width: 100%; }
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
 <div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>nǐ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>想<rt>xiǎng</rt></ruby>，<ruby>再<rt>zài</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Hôm nay bạn đi trường hiến máu không? Bạn suy nghĩ một chút, rồi nói cho tôi biết.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>去<rt>Qù</rt></ruby>！<ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>。<ruby>你<rt>nǐ</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>对<rt>duì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>样<rt>yàng</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>的<rt>de</rt></ruby>。</span><div class="dlg-vi">Đi! Hôm nay trường có hiến máu. Bạn nói đúng, tôi cũng nghĩ như vậy.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>献<rt>Xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>素<rt>sù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby>？<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>吧<rt>ba</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>好<rt>hǎo</rt></ruby>？</span><div class="dlg-vi">Yếu tố của hiến máu là gì? Chúng ta cùng đi xem nhé, được không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>献<rt>Xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>素<rt>sù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby>。<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>吧<rt>ba</rt></ruby>。</span><div class="dlg-vi">Yếu tố của hiến máu là sức khỏe, rất khỏe. Chúng ta cùng đi xem nhé.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>同<rt>Tóng</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>依<rt>yī</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>nǐ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>忙<rt>máng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>吧<rt>ba</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Các bạn lần lượt hiến máu à? Ngày mai bạn có bận không? Nói cho tôi biết nhé, tôi cũng muốn đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>同<rt>tóng</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>依<rt>yī</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>我<rt>wǒ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>谢<rt>xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。</span><div class="dlg-vi">Đúng, các bạn lần lượt hiến máu, rất tốt. Tôi biết rồi, cảm ơn bạn đã nói cho tôi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>异<rt>Yì</rt></ruby><ruby>性<rt>xìng</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>吧<rt>ba</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>好<rt>hǎo</rt></ruby>？</span><div class="dlg-vi">Bạn khác giới cũng hiến máu à? Chúng ta cùng đi xem nhé, được không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>异<rt>yì</rt></ruby><ruby>性<rt>xìng</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>，<ruby>异<rt>yì</rt></ruby><ruby>性<rt>xìng</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>你<rt>nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Đúng, bạn khác giới cũng hiến máu, bạn khác giới rất tốt. Bạn thấy thế nào?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby>？<ruby>你<rt>nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>好<rt>hǎo</rt></ruby>？</span><div class="dlg-vi">Niềm tin của bạn là gì? Bạn thấy thế nào? Chúng ta cùng đi, được không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>给<rt>gěi</rt></ruby><ruby>别<rt>bié</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>别<rt>bié</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。<ruby>我<rt>wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>样<rt>yàng</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>的<rt>de</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Niềm tin của tôi là giúp đỡ người khác, hiến máu cho người khác. Tôi cũng nghĩ như vậy, còn bạn thì sao?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>我<rt>wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>样<rt>yàng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>吧<rt>ba</rt></ruby>。</span><div class="dlg-vi">Được! Niềm tin của bạn rất tốt. Tôi thấy như vậy rất tốt. Ngày mai chúng ta nói tiếp nhé.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>。<ruby>你<rt>nǐ</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>想<rt>xiǎng</rt></ruby>。<ruby>你<rt>nǐ</rt></ruby><ruby>先<rt>xiān</rt></ruby><ruby>别<rt>bié</rt></ruby><ruby>着<rt>zháo</rt></ruby><ruby>急<rt>jí</rt></ruby>，<ruby>慢<rt>màn</rt></ruby><ruby>慢<rt>màn</rt></ruby><ruby>说<rt>shuō</rt></ruby>。</span><div class="dlg-vi">Được! Ngày mai tôi lại hiến máu. Bạn phải suy nghĩ kỹ một chút. Bạn đừng vội, cứ từ từ nói.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Hồng, hôm nay trường có hoạt động hiến máu, bạn đi không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>去<rt>qù</rt></ruby>。<ruby>可<rt>Kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>怕<rt>pà</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>怕<rt>pà</rt></ruby><ruby>疼<rt>téng</rt></ruby>。</span><div class="dlg-vi">Tôi cũng muốn đi. Nhưng tôi hơi sợ, tôi sợ đau.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>别<rt>Bié</rt></ruby><ruby>怕<rt>pà</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>一<rt>yì</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>疼<rt>téng</rt></ruby>，<ruby>一<rt>yí</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Đừng sợ, năm ngoái tôi đã hiến máu rồi, không đau chút nào, một lúc là xong.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>献<rt>Xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>要<rt>yāo</rt></ruby><ruby>求<rt>qiú</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Trước khi hiến máu có yêu cầu gì không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>医<rt>Yī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>过<rt>guò</rt></ruby>，<ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>最<rt>zuì</rt></ruby><ruby>重<rt>zhòng</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>素<rt>sù</rt></ruby>。<ruby>昨<rt>Zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>过<rt>guò</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>就<rt>jiù</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Bác sĩ đã nói, sức khỏe là yếu tố quan trọng nhất của hiến máu. Tối qua ngủ ngon, sáng nay ăn sáng rồi là đi được.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>那<rt>Nà</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>早<rt>zǎo</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Vậy hôm nay tôi đi được. Tối qua tôi ngủ rất ngon, sáng cũng ăn rồi.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>下<rt>Xià</rt></ruby><ruby>午<rt>wǔ</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>始<rt>shǐ</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>依<rt>yī</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>，<ruby>一<rt>yí</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>来<rt>lái</rt></ruby>，<ruby>不<rt>bú</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>着<rt>zháo</rt></ruby><ruby>急<rt>jí</rt></ruby>。</span><div class="dlg-vi">Hai giờ chiều bắt đầu, mọi người hiến máu lần lượt, từng người một, không cần vội.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>异<rt>yì</rt></ruby><ruby>性<rt>xìng</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>会<rt>huì</rt></ruby>。</span><div class="dlg-vi">Được. Người bạn khác giới kia của tôi cũng đi, cậu ấy muốn hiến máu từ lâu rồi, chỉ là chưa có cơ hội.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>来<rt>Lái</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>样<rt>yàng</rt></ruby>，<ruby>只<rt>zhǐ</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby>，<ruby>都<rt>dōu</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>他<rt>tā</rt></ruby>，<ruby>下<rt>xià</rt></ruby><ruby>午<rt>wǔ</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Ai đến cũng như nhau, chỉ cần khỏe mạnh là đều hiến máu được. Bạn bảo cậu ấy, chiều chúng ta cùng đi.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>话<rt>huà</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>他<rt>tā</rt></ruby>。<ruby>对<rt>Duì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>，<ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>为<rt>wèi</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby>？</span><div class="dlg-vi">Được, tôi gọi điện bảo cậu ấy ngay. À này, năm ngoái bạn hiến máu, năm nay lại hiến, sao bạn thích hiến máu thế?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>说<rt>shuō</rt></ruby>，<ruby>人<rt>rén</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby>。<ruby>他<rt>Tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>信<rt>xìn</rt></ruby><ruby>仰<rt>yǎng</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>帮<rt>bāng</rt></ruby><ruby>别<rt>bié</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>对<rt>duì</rt></ruby>。</span><div class="dlg-vi">Bố tôi thường nói, con người phải có niềm tin. Niềm tin của bố là giúp đỡ người khác, tôi thấy bố nói đúng.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>对<rt>duì</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>午<rt>wǔ</rt></ruby><ruby>跟<rt>gēn</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>献<rt>xiàn</rt></ruby><ruby>血<rt>xiě</rt></ruby><ruby>呀<rt>ya</rt></ruby>！</span><div class="dlg-vi">Bố bạn nói đúng. Chiều nay tôi đi hiến máu cùng các bạn!</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
-<div><b>Câu 1.</b> 今天学校有什么？</div>
+<div><b>Câu 1.</b> 今天学校有什么活动？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：今天学校有献血。')">A. 唱歌</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：今天学校有献血。')">B. 考试</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：今天学校有献血。')">C. 看电影</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：今天学校有献血。')">D. 献血</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：今天学校有献血活动')">A. 有旅游活动</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：今天学校有献血活动')">B. 有考试</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：今天学校有献血活动')">C. 有电影</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小明：今天学校有献血活动')">D. 有献血活动</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 献血的要素是什么？</div>
+<div><b>Câu 2.</b> 献血最重要的要素是什么？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：献血的要素是健康，很健康。')">A. 学习</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：献血的要素是健康，很健康。')">B. 睡觉</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：献血的要素是健康，很健康。')">C. 健康</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：献血的要素是健康，很健康。')">D. 工作</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：健康是献血最重要的要素')">A. 吃过晚饭</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小明：健康是献血最重要的要素')">B. 健康</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：健康是献血最重要的要素')">C. 睡得晚</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：健康是献血最重要的要素')">D. 有钱</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
-<div><b>Câu 3.</b> 同学怎么献血？</div>
+<div><b>Câu 3.</b> 大家怎么献血？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：同学依次献血，很好。')">A. 依次献血</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：同学依次献血，很好。')">B. 一起吃饭</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：同学依次献血，很好。')">C. 一起睡觉</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：同学依次献血，很好。')">D. 一起看电影</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：大家依次献血，一个一个来')">A. 谁先来都可以</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：大家依次献血，一个一个来')">B. 只有朋友可以</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小明：大家依次献血，一个一个来')">C. 依次献血，一个一个来</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：大家依次献血，一个一个来')">D. 一起去</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 小红的信仰是什么？</div>
+<div><b>Câu 4.</b> 小明爸爸的信仰是什么？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：我的信仰是献血给别人。')">A. 买东西给自己</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小红：我的信仰是献血给别人。')">B. 献血给别人</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：我的信仰是献血给别人。')">C. 去看电影</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：我的信仰是献血给别人。')">D. 学习汉语</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：他的信仰就是帮别人')">A. 帮别人</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：他的信仰就是帮别人')">B. 买新房子</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：他的信仰就是帮别人')">C. 去大城市</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：他的信仰就是帮别人')">D. 他的信仰是学习</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -861,8 +861,8 @@ img, svg { max-width: 100%; }
 <p><b>Bài 4 (Ngữ pháp):</b> 1. B — 来看 &nbsp;|&nbsp; 2. B — 从数据来看，他去学校。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 献血 → 信仰 → 要素 → 依次 → 异性</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 从信仰来看，他觉得很有意思，他献了两次血，觉得很快乐。<br>2. 这是一个重要要素，老师觉得很好，他们依次走，觉得很有意思，学生依次去了学校。<br>3. 他认识异性朋友，觉得很高兴，他有异性朋友，异性朋友很好。</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. C — 献血 &nbsp;|&nbsp; 2. C — 信仰 &nbsp;|&nbsp; 3. C — 依次走</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 献血 &nbsp; 2. C — 健康 &nbsp; 3. A — 依次献血 &nbsp; 4. B — 献血给别人</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. C — 献血的活动 &nbsp;|&nbsp; 2. C — 依次来到 &nbsp;|&nbsp; 3. C — 信仰</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 有献血活动 &nbsp; 2. B — 健康 &nbsp; 3. C — 依次献血，一个一个来 &nbsp; 4. A — 帮别人</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -967,31 +967,31 @@ var ITEM_INFO = {
   ],
   "read-1": [
     "Đọc hiểu câu 1",
-    "C — 献血"
+    "C — 献血的活动"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
-    "C — 信仰"
+    "C — 依次来到"
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "C — 依次走"
+    "C — 信仰"
   ],
   "dlg-1": [
-    "Nghe hội thoại 1 (今天学校有什么？)",
-    "献血"
+    "Nghe hội thoại 1 (今天学校有什么活动？)",
+    "有献血活动"
   ],
   "dlg-2": [
-    "Nghe hội thoại 2 (献血的要素是什么？)",
+    "Nghe hội thoại 2 (献血最重要的要素是什么？)",
     "健康"
   ],
   "dlg-3": [
-    "Nghe hội thoại 3 (同学怎么献血？)",
-    "依次献血"
+    "Nghe hội thoại 3 (大家怎么献血？)",
+    "依次献血，一个一个来"
   ],
   "dlg-4": [
-    "Nghe hội thoại 4 (小红的信仰是什么？)",
-    "献血给别人"
+    "Nghe hội thoại 4 (小明爸爸的信仰是什么？)",
+    "帮别人"
   ],
   "py-1": [
     "Pinyin: 献血",
@@ -4094,7 +4094,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "婚龄", "pinyin": "hūnlíng", "hanviet": "hôn linh", "meaning": "tuổi kết hôn (số năm đã kết hôn)"}, {"word": "火花", "pinyin": "huǒhuā", "hanviet": "hỏa hoa", "meaning": "tia lửa"}, {"word": "捐赠", "pinyin": "juānzèng", "hanviet": "quyên tặng", "meaning": "quyên tặng, hiến tặng"}, {"word": "困惑", "pinyin": "kùnhuò", "hanviet": "khốn hoặc", "meaning": "bối rối, hoang mang"}, {"word": "利他主义", "pinyin": "lìtāzhǔyì", "hanviet": "lợi tha chủ nghĩa", "meaning": "chủ nghĩa vị tha"}, {"word": "美誉", "pinyin": "měiyù", "hanviet": "mỹ dự", "meaning": "danh tiếng tốt, tiếng thơm"}, {"word": "门当户对", "pinyin": "méndāng-hùduì", "hanviet": "môn đương hộ đối", "meaning": "môn đăng hộ đối"}, {"word": "碰撞", "pinyin": "pèngzhuàng", "hanviet": "bính chàng", "meaning": "va chạm, đụng nhau"}, {"word": "评价", "pinyin": "píngjià", "hanviet": "bình giá", "meaning": "đánh giá, nhận xét"}, {"word": "祈祷", "pinyin": "qídǎo", "hanviet": "kỳ đảo", "meaning": "cầu nguyện"}, {"word": "牵线搭桥", "pinyin": "qiānxiàn-dāqiáo", "hanviet": "khiên tuyến đáp kiều", "meaning": "làm mối, mai mối"}, {"word": "悄然", "pinyin": "qiǎorán", "hanviet": "tiễu nhiên", "meaning": "lặng lẽ, âm thầm"}, {"word": "倾向", "pinyin": "qīngxiàng", "hanviet": "khuynh hướng", "meaning": "xu hướng, thiên hướng"}, {"word": "情侣", "pinyin": "qínglǚ", "hanviet": "tình lữ", "meaning": "cặp tình nhân, cặp đôi yêu nhau"}, {"word": "涉及", "pinyin": "shèjí", "hanviet": "thiệp cập", "meaning": "liên quan đến"}, {"word": "圣地", "pinyin": "shèngdì", "hanviet": "thánh địa", "meaning": "thánh địa"}, {"word": "数据", "pinyin": "shùjù", "hanviet": "số cứ", "meaning": "số liệu, dữ liệu"}, {"word": "坍塌", "pinyin": "tāntā", "hanviet": "than tháp", "meaning": "sụp đổ, đổ sập (nhà, cầu, đất đá)"}, {"word": "同乡", "pinyin": "tóngxiāng", "hanviet": "đồng hương", "meaning": "đồng hương"}, {"word": "推高", "pinyin": "tuīgāo", "hanviet": "thôi cao", "meaning": "đẩy lên cao"}];
+var FLASH_DATA = [{"word": "婚龄", "pinyin": "hūnlíng", "hanviet": "hôn linh", "meaning": "tuổi kết hôn (số năm đã kết hôn)", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>结<rt>jié</rt></ruby><ruby>婚<rt>hūn</rt></ruby><ruby>十<rt>shí</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>婚<rt>hūn</rt></ruby><ruby>龄<rt>líng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>长<rt>cháng</rt></ruby>。", "exv": "Họ kết hôn mười năm rồi, tuổi kết hôn rất dài."}, {"word": "火花", "pinyin": "huǒhuā", "hanviet": "hỏa hoa", "meaning": "tia lửa", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>火<rt>huǒ</rt></ruby><ruby>花<rt>huā</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>小<rt>xiǎo</rt></ruby>。", "exv": "Tôi nhìn thấy một tia lửa, rất nhỏ."}, {"word": "捐赠", "pinyin": "juānzèng", "hanviet": "quyên tặng", "meaning": "quyên tặng, hiến tặng", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>捐<rt>juān</rt></ruby><ruby>赠<rt>zèng</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>给<rt>gěi</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。", "exv": "Anh ấy đã quyên tặng đồ vật cho trường học."}, {"word": "困惑", "pinyin": "kùnhuò", "hanviet": "khốn hoặc", "meaning": "bối rối, hoang mang", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>困<rt>kùn</rt></ruby><ruby>惑<rt>huò</rt></ruby>。", "exv": "Tôi cảm thấy rất bối rối."}, {"word": "利他主义", "pinyin": "lìtāzhǔyì", "hanviet": "lợi tha chủ nghĩa", "meaning": "chủ nghĩa vị tha", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>利<rt>lì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>主<rt>zhǔ</rt></ruby><ruby>义<rt>yì</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby>。", "exv": "Anh ấy là một người có chủ nghĩa vị tha."}, {"word": "美誉", "pinyin": "měiyù", "hanviet": "mỹ dự", "meaning": "danh tiếng tốt, tiếng thơm", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>美<rt>měi</rt></ruby><ruby>誉<rt>yù</rt></ruby>。", "exv": "Ngôi trường này có tiếng thơm rất tốt."}, {"word": "门当户对", "pinyin": "méndāng-hùduì", "hanviet": "môn đương hộ đối", "meaning": "môn đăng hộ đối", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>门<rt>mén</rt></ruby><ruby>当<rt>dāng</rt></ruby><ruby>户<rt>hù</rt></ruby><ruby>对<rt>duì</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。", "exv": "Hai người họ môn đăng hộ đối, rất tốt."}, {"word": "碰撞", "pinyin": "pèngzhuàng", "hanviet": "bính chàng", "meaning": "va chạm, đụng nhau", "exr": "<ruby>两<rt>Liǎng</rt></ruby><ruby>辆<rt>liàng</rt></ruby><ruby>车<rt>chē</rt></ruby><ruby>碰<rt>pèng</rt></ruby><ruby>撞<rt>zhuàng</rt></ruby><ruby>了<rt>le</rt></ruby>。", "exv": "Hai chiếc xe đã va chạm."}, {"word": "评价", "pinyin": "píngjià", "hanviet": "bình giá", "meaning": "đánh giá, nhận xét", "exr": "<ruby>老<rt>Lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>评<rt>píng</rt></ruby><ruby>价<rt>jià</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。", "exv": "Thầy giáo đánh giá anh ấy rất tốt."}, {"word": "祈祷", "pinyin": "qídǎo", "hanviet": "kỳ đảo", "meaning": "cầu nguyện", "exr": "<ruby>她<rt>Tā</rt></ruby><ruby>每<rt>měi</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>祈<rt>qí</rt></ruby><ruby>祷<rt>dǎo</rt></ruby>。", "exv": "Cô ấy cầu nguyện ở nhà mỗi ngày."}, {"word": "牵线搭桥", "pinyin": "qiānxiàn-dāqiáo", "hanviet": "khiên tuyến đáp kiều", "meaning": "làm mối, mai mối", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>给<rt>gěi</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>牵<rt>qiān</rt></ruby><ruby>线<rt>xiàn</rt></ruby><ruby>搭<rt>dā</rt></ruby><ruby>桥<rt>qiáo</rt></ruby>。", "exv": "Anh ấy làm mối cho hai người bạn."}, {"word": "悄然", "pinyin": "qiǎorán", "hanviet": "tiễu nhiên", "meaning": "lặng lẽ, âm thầm", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>悄<rt>qiǎo</rt></ruby><ruby>然<rt>rán</rt></ruby><ruby>离<rt>lí</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。", "exv": "Anh ấy đã lặng lẽ rời khỏi trường học."}, {"word": "倾向", "pinyin": "qīngxiàng", "hanviet": "khuynh hướng", "meaning": "xu hướng, thiên hướng", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>倾<rt>qīng</rt></ruby><ruby>向<rt>xiàng</rt></ruby>。", "exv": "Anh ấy có xu hướng học."}, {"word": "情侣", "pinyin": "qínglǚ", "hanviet": "tình lữ", "meaning": "cặp tình nhân, cặp đôi yêu nhau", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>情<rt>qíng</rt></ruby><ruby>侣<rt>lǚ</rt></ruby>。", "exv": "Họ là một cặp tình nhân trẻ."}, {"word": "涉及", "pinyin": "shèjí", "hanviet": "thiệp cập", "meaning": "liên quan đến", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>工<rt>gōng</rt></ruby><ruby>作<rt>zuò</rt></ruby><ruby>涉<rt>shè</rt></ruby><ruby>及<rt>jí</rt></ruby><ruby>他<rt>tā</rt></ruby>。", "exv": "Công việc này liên quan đến anh ấy."}, {"word": "圣地", "pinyin": "shèngdì", "hanviet": "thánh địa", "meaning": "thánh địa", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>圣<rt>shèng</rt></ruby><ruby>地<rt>dì</rt></ruby>。", "exv": "Họ đến thánh địa này."}, {"word": "数据", "pinyin": "shùjù", "hanviet": "số cứ", "meaning": "số liệu, dữ liệu", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>数<rt>shù</rt></ruby><ruby>据<rt>jù</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>重<rt>zhòng</rt></ruby><ruby>要<rt>yào</rt></ruby>。", "exv": "Số liệu này rất quan trọng."}, {"word": "坍塌", "pinyin": "tāntā", "hanviet": "than tháp", "meaning": "sụp đổ, đổ sập (nhà, cầu, đất đá)", "exr": "<ruby>昨<rt>Zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>突<rt>tū</rt></ruby><ruby>然<rt>rán</rt></ruby><ruby>坍<rt>tān</rt></ruby><ruby>塌<rt>tā</rt></ruby><ruby>了<rt>le</rt></ruby>。", "exv": "Hôm qua mưa lớn, ngôi nhà cũ bỗng nhiên sụp đổ."}, {"word": "同乡", "pinyin": "tóngxiāng", "hanviet": "đồng hương", "meaning": "đồng hương", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>同<rt>tóng</rt></ruby><ruby>乡<rt>xiāng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>。", "exv": "Anh ấy là đồng hương của tôi, cũng là bạn của tôi."}, {"word": "推高", "pinyin": "tuīgāo", "hanviet": "thôi cao", "meaning": "đẩy lên cao", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>把<rt>bǎ</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>推<rt>tuī</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>了<rt>le</rt></ruby>。", "exv": "Họ đã đẩy đồ vật lên cao."}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
@@ -4108,11 +4108,11 @@ function flashRender() {
   var cur = flashDeck[flashIdx], w = cur.w;
   var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
   if (cur.hanziFront) {
-    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-hanzi">' + w.word + '</div>';
+    back.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   } else {
-    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div>';
+    back.innerHTML = '<div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   }
   document.getElementById('flash-card').classList.remove('flipped');
   document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
@@ -4137,7 +4137,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"id": "ming", "name": "小明", "py": "Xiǎo Míng", "gender": "nam", "vi": "Minh", "color": "#2563eb"}, {"id": "hong", "name": "小红", "py": "Xiǎo Hóng", "gender": "nữ", "vi": "Hồng", "color": "#db2777"}];
-var DLG_LINES = [{"sp": "ming", "zh": "你好！你今天去学校献血吗？你想一想，再告诉我。"}, {"sp": "hong", "zh": "去！今天学校有献血。你说得对，我也是这样想的。"}, {"sp": "ming", "zh": "献血的要素是什么？我们一起去看看吧，好不好？"}, {"sp": "hong", "zh": "献血的要素是健康，很健康。我们一起去看看吧。"}, {"sp": "ming", "zh": "同学依次献血吗？你明天忙吗？告诉我吧，我也想去。"}, {"sp": "hong", "zh": "是，同学依次献血，很好。我知道了，谢谢你告诉我。"}, {"sp": "ming", "zh": "异性朋友也献血吗？我们一起去看看吧，好不好？"}, {"sp": "hong", "zh": "是，异性朋友也献血，异性朋友很好。你觉得怎么样？"}, {"sp": "ming", "zh": "你的信仰是什么？你觉得怎么样？我们一起去，好不好？"}, {"sp": "hong", "zh": "我的信仰是献血给别人，别人很高兴。我也是这样想的，你呢？"}, {"sp": "ming", "zh": "好！你的信仰很好。我觉得这样很好。我们明天再说吧。"}, {"sp": "hong", "zh": "好！明天我再献血。你要好好想一想。你先别着急，慢慢说。"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，今天学校有献血活动，你去吗？"}, {"sp": "hong", "zh": "我也想去。可是我有点儿怕，我怕疼。"}, {"sp": "ming", "zh": "别怕，我去年献血了，一点儿也不疼，一会儿就好了。"}, {"sp": "hong", "zh": "献血以前有什么要求吗？"}, {"sp": "ming", "zh": "医生说过，健康是献血最重要的要素。昨天睡得好，今天吃过早饭，就可以去。"}, {"sp": "hong", "zh": "那我今天可以去。我昨天睡得很好，早饭也吃了。"}, {"sp": "ming", "zh": "下午两点开始，大家依次献血，一个一个来，不用着急。"}, {"sp": "hong", "zh": "好。我那个异性朋友也去，他早就想献血了，就是没有机会。"}, {"sp": "ming", "zh": "来的人都一样，只要健康，都可以献血。你告诉他，下午我们一起去。"}, {"sp": "hong", "zh": "好，我现在就打电话告诉他。对了，你去年献血，今年还献血，你为什么这么喜欢献血？"}, {"sp": "ming", "zh": "我爸爸常说，人要有信仰。他的信仰就是帮别人，我觉得他说得对。"}, {"sp": "hong", "zh": "你爸爸说得对。我下午跟你们一起去献血呀！"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
